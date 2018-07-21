@@ -5,9 +5,9 @@
   <subtitle>龙——小则隐介藏形，大则兴云吐雾</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://wooloong.github.io/"/>
   <updated>2018-07-20T15:06:46.250Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://wooloong.github.io/</id>
   
   <author>
     <name>Wooloong</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>我的第一篇文章</title>
-    <link href="http://yoursite.com/2018/07/20/my-new-post/"/>
-    <id>http://yoursite.com/2018/07/20/my-new-post/</id>
+    <link href="https://wooloong.github.io/2018/07/20/my-new-post/"/>
+    <id>https://wooloong.github.io/2018/07/20/my-new-post/</id>
     <published>2018-07-20T14:56:02.000Z</published>
     <updated>2018-07-20T15:06:46.250Z</updated>
     
@@ -32,8 +32,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2018/07/20/hello-world/"/>
-    <id>http://yoursite.com/2018/07/20/hello-world/</id>
+    <link href="https://wooloong.github.io/2018/07/20/hello-world/"/>
+    <id>https://wooloong.github.io/2018/07/20/hello-world/</id>
     <published>2018-07-20T13:38:46.443Z</published>
     <updated>2018-07-20T13:38:46.443Z</updated>
     
