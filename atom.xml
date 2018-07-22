@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wooloong.github.io/"/>
-  <updated>2018-07-21T04:12:49.018Z</updated>
+  <updated>2018-07-22T12:53:14.266Z</updated>
   <id>https://wooloong.github.io/</id>
   
   <author>
@@ -17,47 +17,19 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>codingPage</title>
-    <link href="https://wooloong.github.io/2018/07/21/codingPage/"/>
-    <id>https://wooloong.github.io/2018/07/21/codingPage/</id>
-    <published>2018-07-21T04:12:48.000Z</published>
-    <updated>2018-07-21T04:12:49.018Z</updated>
+    <title>我的博客（My Blog）, Welcome!</title>
+    <link href="https://wooloong.github.io/2018/07/22/markdown-1/"/>
+    <id>https://wooloong.github.io/2018/07/22/markdown-1/</id>
+    <published>2018-07-22T12:26:58.000Z</published>
+    <updated>2018-07-22T12:53:14.266Z</updated>
     
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>我的第一篇文章</title>
-    <link href="https://wooloong.github.io/2018/07/20/my-new-post/"/>
-    <id>https://wooloong.github.io/2018/07/20/my-new-post/</id>
-    <published>2018-07-20T14:56:02.000Z</published>
-    <updated>2018-07-20T15:06:46.250Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://wooloong.github.io/2018/07/20/hello-world/"/>
-    <id>https://wooloong.github.io/2018/07/20/hello-world/</id>
-    <published>2018-07-20T13:38:46.443Z</published>
-    <updated>2018-07-20T13:38:46.443Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>用<a href="https://github.com/" title="GitHub" target="_blank" rel="noopener">GitHub</a>技术，加上功能强大的博客框架（powerful blog framework）<a href="https://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>,搭建了我的个人博客。<br>国内用户可访问链接 <a href="https://wooloong.coding.me/" title="wooloong的博客" target="_blank" rel="noopener">https://wooloong.coding.me/</a>.<br>国外用户可访问链接 <a href="https://wooloong.github.io/" title="wooloong的博客">https://wooloong.github.io/</a>.  </p><p>感谢大家的捧场，定期会发布一些有一定深度的技术文章与专题，供大家学习、研究与讨论。<br>今天简单讲讲非常好用的写博客的标识性语言——Markdown语言。</p><h2 id="Markdown语言"><a href="#Markdown语言" class="headerlink" title="Markdown语言"></a>Markdown语言</h2><p>以下是一段Markdown语言写的文本，效果样式在展示在后面。<br><strong>Markdown文本如下：</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"># 标题1</span><br><span class="line">## 标题2</span><br><span class="line">### 标题3（依次类推）</span><br><span class="line"></span><br><span class="line">* 无序列表</span><br><span class="line">* 无序列表</span><br><span class="line">* 无序列表  </span><br><span class="line">1. 列表1</span><br><span class="line">2. 列表2</span><br><span class="line">3. 列表3  </span><br><span class="line"></span><br><span class="line">*斜体*  </span><br><span class="line">**黑体**  </span><br><span class="line">` 代码 `</span><br><span class="line"></span><br><span class="line">[百度链接](https://www.baidu.com/)</span><br><span class="line">--- </span><br><span class="line">天安门图片：  </span><br><span class="line">![](http://pic0.huitu.com/res/20180613/1782557_20180613183716491149_1.jpg)</span><br></pre></td></tr></table></figure></p><p><strong>效果样式展示 ：</strong></p><h1 id="标题1"><a href="#标题1" class="headerlink" title="标题1"></a>标题1</h1><h2 id="标题2"><a href="#标题2" class="headerlink" title="标题2"></a>标题2</h2><h3 id="标题3（依次类推）"><a href="#标题3（依次类推）" class="headerlink" title="标题3（依次类推）"></a>标题3（依次类推）</h3><ul><li>无序列表</li><li>无序列表</li><li>无序列表  </li></ul><ol><li>列表1</li><li>列表2</li><li>列表3  </li></ol><p><em>斜体</em><br><strong>黑体</strong><br><code>代码</code></p><h2 id="百度链接"><a href="#百度链接" class="headerlink" title="百度链接"></a><a href="https://www.baidu.com/" target="_blank" rel="noopener">百度链接</a></h2><p>天安门图片：<br><img src="http://pic0.huitu.com/res/20180613/1782557_20180613183716491149_1.jpg" alt="">  </p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+        &lt;p&gt;用&lt;a href=&quot;https://github.com/&quot; title=&quot;GitHub&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;技术，加上功能强大的博客框架（powerful blog framework）&lt;a href=&quot;ht
       
     
     </summary>
