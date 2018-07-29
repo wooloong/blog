@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>https://wooloong.github.io/2018/07/22/markdown-1/</loc>
+    <lastmod>2018-07-29T02:28:04.004Z</lastmod>
+    <data>
+        <display>
+        <title>我的博客（My Blog）, Welcome!</title>
+        <pubTime>2018-07-22T12:26:58.000Z</pubTime>
+        
+        <tag>Markdown</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://wooloong.github.io/2018/07/29/simple-factory/</loc>
+    <lastmod>2018-07-29T02:27:51.764Z</lastmod>
+    <data>
+        <display>
+        <title>面向对象编程——从简单工厂（Simple Factory）开始</title>
+        <pubTime>2018-07-29T02:24:21.978Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+</urlset>
