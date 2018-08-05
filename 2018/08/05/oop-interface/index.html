@@ -1,0 +1,224 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="有关编程技术类，量化程序化实现的博客"><meta name="baidu-site-verification" content="sFKNEmEJVv"><title>面向对象编程——世界专车公司（一）：按接口编程 | 卧龙</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/8.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><link rel="alternate" type="application/atom+xml" href="/atom.xml"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">面向对象编程——世界专车公司（一）：按接口编程</h1><a id="logo" href="/.">卧龙</a><p class="description">龙——小则隐介藏形，大则兴云吐雾</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">面向对象编程——世界专车公司（一）：按接口编程</h1><div class="post-meta">Aug 5, 2018<span> | </span><span class="category"><a href="/categories/面向对象编程/">面向对象编程</a></span></div><div class="post-content"><h2 id="序言"><a href="#序言" class="headerlink" title="序言"></a>序言</h2><p> 　　面向对象编程（简称:OOP）要求我们按人的思考方式来解决程序设计中的各类关联问题。这种编程的好处使得对象之间具有某种独立性，否则可能会奇怪的出现在你家里长期住着一个邋遢的陌生人的情景，而真实的世界是不应该有这样的情况的。这种好的独立性，使得对象之间必须联系的时候才进行联系，这会使得编写的代码易于重用、维护及扩展。</p>
+<p>　　我们从简单工厂（Simple Factory）开始OOP的主题，为了形象的进行讲述，我们假想一家专车公司，称为世界专车公司（World Special Inc），我们想在这一行竞争中脱颖而出，成为世界第一（Number One），必须让我们的乘客客户获得更好，更快，更安全的服务。  </p>
+<h2 id="按接口编程"><a href="#按接口编程" class="headerlink" title="按接口编程"></a>按接口编程</h2><p>　　<strong>说明</strong>：程序的代码往往都是同一个团队写的，修改代码对你们来说非常方便，从而很容易忽视面向对象编程的方式。记住程序里面表示的外界对象，要按它们的真实情景来思考。比如代表司机的Driver类，就应该按Driver类是司机的方式来思考自己本身及与其他对象的联系。<br>　　我们的专车公司当前有三类车：奔驰车（Bens）、宝马车（BWM， “别摸我”）、奥迪车（Audi），每辆车都会有一个车牌号（Plate No）。</p>
+<p><strong>Bens :</strong>    </p>
+<pre><code>package object.world.special;
+
+public class Bens {
+    private String plateNo ; // 车牌号码
+
+    public Bens(String plateNo){
+        this.plateNo = plateNo ;
+    }
+
+    public void openKey(){
+        System.out.println(&quot;车牌号码 &quot; + plateNo + &quot; 的Bens车的锁打开了&quot;);
+    }
+
+    public void start(){
+        System.out.println(&quot;车牌号码 &quot; + plateNo + &quot; 的Bens车启动了&quot;);
+    }
+
+    public void run(){
+        System.out.println(&quot;车牌号码 &quot; + plateNo + &quot; 的Bens车在路上&quot;);
+    }    
+}
+</code></pre><p><strong>BWM :</strong>  </p>
+<pre><code>package object.world.special;
+
+public class BWM {
+    private String plateNo ; // 车牌号码
+
+    public BWM(String plateNo){
+        this.plateNo = plateNo ;
+    }
+
+    public void openKey(){
+        System.out.println(&quot;车牌号码 &quot; + plateNo + &quot; 的BWM车的锁打开了&quot;);
+    }
+
+    public void start(){
+        System.out.println(&quot;车牌号码 &quot; + plateNo + &quot; 的BWM车启动了&quot;);
+    }
+
+    public void run(){
+        System.out.println(&quot;车牌号码 &quot; + plateNo + &quot; 的BWM车在路上&quot;);
+    }    
+}
+</code></pre><p><strong>Audi :</strong></p>
+<pre><code>package object.world.special;
+
+public class Audi {
+    private String plateNo ; // 车牌号码
+
+    public Audi(String plateNo){
+        this.plateNo = plateNo ;
+    }
+
+    public void openKey(){
+        System.out.println(&quot;车牌号码 &quot; + plateNo + &quot; 的Audi车的锁打开了&quot;);
+    }
+
+    public void start(){
+        System.out.println(&quot;车牌号码 &quot; + plateNo + &quot; 的Audi车启动了&quot;);
+    }
+
+    public void run(){
+        System.out.println(&quot;车牌号码 &quot; + plateNo + &quot; 的Audi车在路上&quot;);
+    }
+}
+</code></pre><p><strong>Driver（世界专车公司的司机员工）：</strong>   </p>
+<pre><code>package object.world.special;
+
+public class Driver {
+    private String staffNo ; // 员工编号
+    private Bens bens ;
+
+    public Driver(String staffNo , Bens bens){
+        this.staffNo = staffNo;
+        this.bens = bens ;
+    }
+
+    public void drive(){
+        System.out.println(&quot;员工编号为 &quot;+ staffNo + &quot; 司机在驾驶汽车&quot;);
+        bens.openKey();
+        bens.start();
+        bens.run();
+    }
+
+    public void change(Bens otherBens){
+        bens = otherBens;
+    }
+}
+</code></pre><p><strong>乘客开始打专车服务：</strong></p>
+<pre><code>package object.world.special;
+
+public class ModelClient {
+
+    public static void main(String[] args) {
+        // 一位驾驶 Bens（奔驰）的驾驶员
+        Driver driver = new Driver(&quot;WS0001&quot; ,new Bens(&quot;苏E10001&quot;));
+        driver.drive();
+
+        // 给司机换辆 Bens（奔驰）
+        driver.change(new Bens(&quot;苏E10002&quot;));
+        driver.drive();                
+    }
+}
+</code></pre><p>让我们看看输出的结果是什么？   </p>
+<pre><code>员工编号为 WS0001 司机在驾驶汽车
+车牌号码 苏E10001 的Bens车的锁打开了
+车牌号码 苏E10001 的Bens车启动了
+车牌号码 苏E10001 的Bens车在路上
+-------- 人为的分割线 --------
+员工编号为 WS0001 司机在驾驶汽车
+车牌号码 苏E10002 的Bens车的锁打开了
+车牌号码 苏E10002 的Bens车启动了
+车牌号码 苏E10002 的Bens车在路上
+</code></pre><p>我们让司机换辆 BWM 上路 ：  <code>driver.change(new BWM(&quot;苏E80001&quot;));</code> 结果发现代码根本编译不过，因为从Driver类里注意到这个司机有一个Bens属性，这表明这司机其实只会驾驶Bens车。这显然不符合实际情况，不是我们所想要的，专车公司要的是会驾驶各类小汽车的员工。 </p>
+<h3 id="设计原则：针对接口编程，而不是针对实现编程"><a href="#设计原则：针对接口编程，而不是针对实现编程" class="headerlink" title="设计原则：针对接口编程，而不是针对实现编程"></a>设计原则：针对接口编程，而不是针对实现编程</h3><p>　　我们修改代码，不应该把Driver驾驶的汽车类别固定死，而采用按接口编程。在Java语言里面，针对接口编程有两种方式：  </p>
+<p><center><strong>1. 继承抽象超类(abstract super class)，关键字 extends</strong></center> <center><strong>2. 实现接口(interface)，关键字 implements</strong></center><br>　　一般如果有很多基本的方法（method）子类都可以通用，往往继承抽象超类的方式，把那些基本的方法放入抽象超类。我们在这里采用实现接口的方式来处理，引入一个 Car 接口，接口里面的方法都是抽象的，并且是 public 的， 实现接口里面的类的方法则会具有多态（polymorphic）性：执行时会按照实际状态来执行真正的行为（Java程序其实指的是方法）。接口 Car 可以这样设计：   </p>
+<p><strong>Car：</strong>  </p>
+<pre><code>package object.world.special;
+
+public interface Car {
+    void openKey();
+    void start();
+    void run();
+}
+</code></pre><p>我们发现接口里面的三个方法名与前面三类车的方法名是相同的，这是因为我们的类需要实现接口的缘故。修改后实现接口 Car 的 Bens 来看一下代码（BWM，Audi 一样处理）</p>
+<p><strong> Bens：</strong>  </p>
+<pre><code>package object.world.special;
+
+public class Bens implements Car{
+    private String plateNo ; // 车牌号码
+
+    public Bens(String plateNo){
+        this.plateNo = plateNo ;
+    }
+
+    public void openKey(){
+        System.out.println(&quot;车牌号码 &quot; + plateNo + &quot; 的Bens车的锁打开了&quot;);
+    }
+
+    public void start(){
+        System.out.println(&quot;车牌号码 &quot; + plateNo + &quot; 的Bens车启动了&quot;);
+    }
+
+    public void run(){
+        System.out.println(&quot;车牌号码 &quot; + plateNo + &quot; 的Bens车在路上&quot;);
+    }
+}
+</code></pre><p>　　只在 class 这一行添加了 <code>implements Car</code>，意思是要实现 Car 里面的方法，这三个方法一开始就有了，如果 Car 添加新的方法，则 Bens 需要添加同样方法名的方法来实现。这样Bens（奔驰）、BWM（宝马）、Audi（奥迪）针对 Car 接口都有了自己不同的实现。<br>　　接下来要修改Driver（司机）类，让司机会驾驶所有的小汽车（Car），把 Bens 替换为 Car 即可。<br><strong>Driver：</strong>   </p>
+<pre><code>package object.world.special;
+
+public class Driver {
+    private String staffNo ; // 员工编号
+    private Car car ;
+
+    public Driver(String staffNo , Car car){
+        this.staffNo = staffNo;
+        this.car = car ;
+    }
+
+    public void drive(){
+        System.out.println(&quot;员工编号为 &quot;+ staffNo + &quot; 司机在驾驶汽车&quot;);
+        car.openKey();
+        car.start();
+        car.run();
+    }
+
+    public void change(Car otherCar){
+        car = otherCar;
+    }
+}
+</code></pre><p><strong>乘客继承打专车服务：</strong>    </p>
+<pre><code>package object.world.special;
+
+public class ModelClient {
+
+    public static void main(String[] args) {
+        // 一位驾驶 Bens（奔驰）的驾驶员
+        Driver driver = new Driver(&quot;WS0001&quot; ,new Bens(&quot;苏E10001&quot;));
+        driver.drive();
+
+        // 给司机换辆 Bens（奔驰）
+        driver.change(new Bens(&quot;苏E10002&quot;));
+        driver.drive();    
+
+        // === 新添加的代码 ===
+        // 给司机换辆 BWM（别摸我）
+        driver.change(new BWM(&quot;苏E80001&quot;));
+        driver.drive();
+
+        // 给司机换辆 Audi（奥迪）
+        driver.change(new Audi(&quot;苏E60001&quot;));
+        driver.drive();            
+    }
+}　
+</code></pre><p> 先让我们看看这次输出的结果是什么？   </p>
+<pre><code>员工编号为 WS0001 司机在驾驶汽车
+车牌号码 苏E10001 的Bens车的锁打开了
+车牌号码 苏E10001 的Bens车启动了
+车牌号码 苏E10001 的Bens车在路上
+-------- 人为的分割线 --------
+员工编号为 WS0001 司机在驾驶汽车
+车牌号码 苏E10002 的Bens车的锁打开了
+车牌号码 苏E10002 的Bens车启动了
+车牌号码 苏E10002 的Bens车在路上
+---- 人为的分割线 ，底下为新的代码 ----
+员工编号为 WS0001 司机在驾驶汽车
+车牌号码苏E80001的BWM车的锁打开了
+车牌号码苏E80001的BWM车启动了
+车牌号码苏E80001的BWM车在路上
+-------- 人为的分割线 --------
+员工编号为 WS0001 司机在驾驶汽车
+车牌号码苏E60001的Audi车的锁打开了
+车牌号码苏E60001的Audi车启动了
+车牌号码苏E60001的Audi车在路上
+</code></pre><p>　　我们发现 ModelClient类的main方法 前面的代码并不需要做任何修改，另外这三类车，Driver 里面的 Car 属性都能够接受，同样是 <code>driver.drive();</code> 的代码，然而可以根据具体是什么车来实现相应的行为，宝马车（BMW）展示的就是宝马车的行为，奥迪车（Audi）展示的就是奥迪车的行为，这就是接口编程的好处，使得司机轻松驾驶每一种类型的车。</p>
+<h6 id="参考-："><a href="#参考-：" class="headerlink" title="参考 ："></a>参考 ：</h6><blockquote>
+<p>Head First 设计模式（中文版）—— 中国电力出版社 ISBN：978-7-508-35393-7</p>
+</blockquote>
+<hr>
+<h2 id="下一讲：我们来讲述简单工厂（Simple-Factory）的主题"><a href="#下一讲：我们来讲述简单工厂（Simple-Factory）的主题" class="headerlink" title="下一讲：我们来讲述简单工厂（Simple Factory）的主题"></a>下一讲：我们来讲述简单工厂（Simple Factory）的主题</h2></div><div class="tags"><a href="/tags/Java/">Java</a></div><div class="post-nav"><a class="next" href="/2018/07/22/markdown-1/">我的博客（My Blog）, Welcome!</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form class="search-form" action="//www.baidu.com/baidu" method="get" accept-charset="utf-8" target="_blank"><input type="search" name="word" maxlength="20" placeholder="Search"/><input type="hidden" name="si" value="https://wooloong.github.io"/><input name="tn" type="hidden" value="bds"/><input name="cl" type="hidden" value="3"/><input name="ct" type="hidden" value="2097152"/><input name="s" type="hidden" value="on"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/面向对象编程/">面向对象编程</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/Markdown/" style="font-size: 15px;">Markdown</a> <a href="/tags/Java/" style="font-size: 15px;">Java</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最近文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/08/05/oop-interface/">面向对象编程——世界专车公司（一）：按接口编程</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/22/markdown-1/">我的博客（My Blog）, Welcome!</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="https://weibo.com/u/6607582109" title="新浪微博" target="_blank">新浪微博</a><ul></ul><a href="http://glorystudio.com.cn/" title="量化交易展示" target="_blank">量化交易展示</a><ul></ul><a href="https://www.cnblogs.com/wooloong/" title="技术博客" target="_blank">技术博客</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2018 <a href="/." rel="nofollow">卧龙.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a class="show" id="rocket" href="#top"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/fancybox/3.3.5/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
